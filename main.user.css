@@ -76,6 +76,11 @@
   .icon
     color: var(--bg-tc2) !important
       
+  
+  // ******
+  // Footer
+  // ******
+  
   .ui.stackable.grid.basic.attached.secondary.aligned.segment
     background: var(--bg-2)
     .ui.header
