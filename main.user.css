@@ -1,0 +1,99 @@
+/* ==UserStyle==
+@name           RemoteRetro Dark Theme
+@namespace      cuddlecake
+@version        2021.3.1
+@description    A new userstyle
+@author         Alexander Sawtschuk @cuddlecake
+@homepageURL    https://github.com/cuddlecake/remoteretro-dark-theme
+@updateURL      https://cuddlecake.github.io/remoteretro-dark-theme/main.user.css
+@preprocessor stylus
+
+@var checkbox showHeader "Show Header Bar" 0
+==/UserStyle== */
+
+@-moz-document regexp("^https?://remoteretro.org/retros/.*") 
+  :root 
+    --bg-1: hsla(0, 0%, 15%, 1)
+    --bg-2: hsla(0, 0%, 25%, 1)
+    --bg-tc1: hsla(0, 0%, 85%, 1)
+    --bg-tc2: hsla(0, 0%, 70%, 1)
+      
+  if !showHeader
+    .branded-header-container
+      display: none !important
+      
+  .ui.medium.header
+    color: var(--bg-tc1) !important
+      
+  body.retro-show-page
+    background: var(--bg-1) !important
+    
+  .modal
+    background: var(--bg-2)
+    color: var(--bg-tc2)
+    .ui.dividing.huge.header
+      color: var(--bg-tc1) !important
+  
+  .ideas, [class*="idea_group__list"]
+    display: flex
+    padding-top: 8px
+    padding-bottom: 8px
+    flex-direction: column
+    li + li
+      margin-top: 8px
+    li
+      background: var(--bg-2) !important
+      border-radius: 8px
+      border: none
+      .text 
+        color: var(--bg-tc1) !important
+        
+  [class*="idea_group__list"] li
+    color: var(--bg-tc1)
+        
+  .idea-card
+    background: var(--bg-2)
+    color: var(--bg-tc1)
+    font-size: 14px
+    
+  // Voting
+  [class*="voting_interface__alter-count"]
+    color: var(--bg-tc1) !important
+    background: var(--bg-2)
+    
+  [class*="voting_interface__vote-count"]
+    color: hsla(200, 70%, 90%,1) !important
+    background: hsla(200, 85%, 25%, 1) !important
+    
+  [class*="voting_interface__votes"]
+    background: var(--bg-2) !important
+    color: var(--bg-tc2) !important
+        
+  #user-list
+    li p
+      color: var(--bg-tc1) !important
+      
+  .icon
+    color: var(--bg-tc2) !important
+      
+  .ui.stackable.grid.basic.attached.secondary.aligned.segment
+    background: var(--bg-2)
+    .ui.header
+      color: var(--bg-tc1) !important
+    .sub.header
+      color: var(--bg-tc2) !important
+    button.basic
+      background: var(--bg-1)
+      
+    
+    label
+      color: var(--bg-tc1) !important
+      
+    select, input
+      background: var(--bg-1)
+      color: var(--bg-tc1)
+      
+    button
+      :disabled
+        opacity: 1 !important
+    
