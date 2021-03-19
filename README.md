@@ -1,6 +1,7 @@
-# Remoteretro Dark THeme
+# Remoteretro Dark Theme
 
 This is a Dark Theme for remoteretro.org/retro
+
 ## Installation
 
 1. Install [Stylus](https://github.com/openstyles/stylus) Browser Extension
